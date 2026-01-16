@@ -12,7 +12,7 @@ function setUser(user){
     secret
     )
 }
-
+// getUser
 function getUser(req,res,next){
     const authHeader = req.headers.authorization;
     if(!authHeader) return res.json({success:false,message:'Unauthorized'});
