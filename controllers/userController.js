@@ -4,6 +4,7 @@ const bcrypt = require('bcrypt')
 const authService = require('../services/authService')
 const generateToken = require('../services/authService');
 
+//signup
 const signUp = async(req,res) => {
     try {
         const data = req.body;
@@ -23,6 +24,7 @@ const signUp = async(req,res) => {
     }
 }
 
+//login
 const login = async(req,res) => {
      try {
         const {aadharcardNumber,password} = req.body;
@@ -44,7 +46,7 @@ const login = async(req,res) => {
     }
 }
 
-
+//profile
 const profile = async(req,res) => {
      try {
         const userData = req.user;
@@ -59,6 +61,7 @@ const profile = async(req,res) => {
     }
 }
 
+//password
 const passwordUpdate = async(req,res) => {
      try {
         const userData = req.user.id;
